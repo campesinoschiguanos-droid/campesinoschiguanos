@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: campesinos-chiguanos
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: waitress-serve --listen=0.0.0.0:$PORT --threads=4 --connection-limit=100 --max-request-body-size=16384 --max-request-header-size=8192 app:app
+    healthCheckPath: /healthz
+    envVars:
+      - key: TRUSTED_HOSTS
+        fromService:
+          type: web
+          name: campesinos-chiguanos
+          envVarKey: RENDER_EXTERNAL_HOSTNAME

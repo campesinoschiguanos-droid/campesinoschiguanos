@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#6E8B60">
+  <meta name="description" content="Campesinos Chiguanos: caldos de hueso, cuadros congelados, pollo, marinados y productos del campo. Arma tu pedido y confírmalo por WhatsApp.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:title" content="Campesinos Chiguanos | Cosechando nuestra herencia">
+  <meta property="og:description" content="Caldos de hueso y alimentos del campo. Compra fácil y confirma tu pedido por WhatsApp.">
+  <meta property="og:image" content="{{ product_images['broth-pollo'] }}">
+  <title>Campesinos Chiguanos | Cosechando nuestra herencia</title>
+  <link rel="icon" href="/static/1de18f3940394a.png" type="image/png">
+<script src="/static/startup.js?v={{ asset_version }}"></script>
+<script src="/static/theme.js?v={{ asset_version }}"></script>
+<link rel="stylesheet" href="/static/styles.css?v={{ asset_version }}">
+<link rel="stylesheet" href="/static/refinements.css?v={{ asset_version }}">
+<link rel="stylesheet" href="/static/night.css?v={{ asset_version }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body data-whatsapp-url="https://wa.me/{{ whatsapp_number }}">
+  <a class="skip-link" href="#tienda">Saltar a la tienda</a>
+
+  <header class="header" id="inicio">
+    <div class="shell header__inner">
+      <div class="brand">
+        <img src="/static/106257159cb5f8.png" alt="" width="640" height="640"><span class="brand__name">Campesinos<br><b>Chiguanos</b></span>
+      </div>
+
+      <button class="theme-switch" id="themeSwitch" type="button" role="switch" aria-checked="false" aria-label="Activar modo noche" title="Cambiar entre día y noche">
+        <svg class="theme-switch__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+        <svg class="theme-switch__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.8A8.8 8.8 0 0 1 9.2 3.5 8.8 8.8 0 1 0 20.5 14.8Z"/></svg>
+        <span class="theme-switch__thumb" aria-hidden="true"></span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Navegación principal">
+        <a href="#tienda">Productos</a>
+        <a href="#historia">Nuestra historia</a>
+        <a href="#como-comprar">Cómo comprar</a>
+        <a href="#faq">Preguntas</a>
+        <a href="#recetas">Recetas</a>
+      </nav>
+
+      <button class="cart-pill" id="openCart" aria-label="Abrir carrito">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 9.6a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5L21 7H7M10 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Carrito</span>
+        <b id="cartCount">0</b>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero__green" aria-hidden="true"></div>
+      <div class="hero__cream" aria-hidden="true"></div>
+      <div class="hero__orb" aria-hidden="true"><span class="hero__orb-disc"></span></div>
+      <div class="hero__blob hero__blob--salmon" aria-hidden="true"></div>
+      <svg class="hero__scribble" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><path d="M30 225C190 95 380 90 540 160c150 66 265 70 430-30"/></svg>
+
+      <div class="shell hero__grid">
+        <div class="hero__copy">
+          <span class="kicker kicker--light">Campesinos Chiguanos</span>
+          <h1 id="heroTitle">Cosechando<br>nuestra herencia.</h1>
+          <div class="hero__actions">
+            <a class="btn btn--outline-light" href="#tienda">Conocer productos</a>
+          </div>
+          <div class="hero__facts">
+            <div><strong>A fuego lento</strong><span>Caldos en varias presentaciones</span></div>
+            <div><strong>Cuadros congelados</strong><span>Porciones prácticas de 30 g</span></div>
+            <div><strong>De nuestra tierra</strong><span>Choachí, Cundinamarca</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual hero-cascade" id="heroCascade" role="region" aria-label="Nuestros productos en fotografías">
+          <div class="hero-cascade__window" id="heroGallery">
+            {% for column in hero_columns %}
+            <div class="hero-cascade__lane hero-cascade__lane--{{ column|length }}">
+              <div class="hero-cascade__group">
+                {% for product in column %}
+                <div class="hero-cascade__slot">
+                  <div class="hero-cascade__card" data-category="{{ product.categoriaVisual }}">
+                    <img src="{{ product.imagen }}" alt="{{ product.nombre }}" width="240" height="300" decoding="async" loading="eager">
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-categories" id="productos" aria-label="Categorías principales">
+      <div class="shell quick-categories__grid">
+        <button data-jump-filter="caldos"><span>01</span><strong>Caldos de hueso</strong><small>Pollo, res, neutro, dual y sabores</small></button>
+        <button data-jump-filter="cubos"><span>02</span><strong>Cuadros congelados</strong><small>Pollo, res, sabores y aloe vera</small></button>
+        <button data-jump-filter="pollo"><span>03</span><strong>Pollo</strong><small>Cortes, personalizados y hamburguesa</small></button>
+        <button data-jump-filter="marinados"><span>04</span><strong>Marinados</strong><small>Listos para una cocina práctica</small></button>
+        <button data-jump-filter="frescos"><span>05</span><strong>Frescos</strong><small>Aguacate y zucchini</small></button>
+      </div>
+    </section>
+
+    <section class="signature section">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <span class="kicker">Los protagonistas</span>
+            <h2>Un buen caldo.<br>Mil formas de disfrutarlo.</h2>
+          </div>
+        </div>
+
+        <div class="signature__grid">
+          <article class="signature-card signature-card--chicken">
+            <div class="signature-card__decor signature-card__decor--a" aria-hidden="true"></div>
+            <div class="signature-card__copy">
+              <span class="signature-card__eyebrow">Chicken Bone Broth</span>
+              <h3>Chicken Bone Broth</h3>
+              <p>Sabor suave, ligero y versátil, con una textura gelatinosa delicada.</p>
+              <ul class="signature-card__highlights"><li><strong>Beneficios:</strong> sus aminoácidos y colágeno tipo II complementan una alimentación orientada al cuidado de articulaciones, piel, cabello y uñas.</li><li>Fácil de integrar a la rutina diaria.</li><li>Ideal para sopas claras, salsas suaves, arroces y bebidas calientes.</li></ul>
+            </div>
+            <img loading="lazy" decoding="async" src="{{ product_images['broth-pollo'] }}" alt="Chicken Bone Broth Campesinos Chiguanos" width="1086" height="1448">
+          </article>
+
+          <article class="signature-card signature-card--beef">
+            <div class="signature-card__decor signature-card__decor--b" aria-hidden="true"></div>
+            <div class="signature-card__copy">
+              <span class="signature-card__eyebrow">Beef Bone Broth</span>
+              <h3>Beef Bone Broth</h3>
+              <p>Sabor fuerte, concentrado y profundo, con una textura más densa y abundante gelatina natural.</p>
+              <ul class="signature-card__highlights"><li><strong>Beneficios:</strong> su colágeno tipo I y III y su perfil sustancioso complementan una alimentación orientada al cuidado de huesos, tendones, articulaciones y piel.</li><li>Una opción sustanciosa y de mayor saciedad.</li><li>Ideal para guisos, ramen, estofados y fondos intensos.</li></ul>
+            </div>
+            <img loading="lazy" decoding="async" src="{{ product_images['broth-beef'] }}" alt="Beef Bone Broth Campesinos Chiguanos" width="1086" height="1448">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="formats section">
+      <div class="formats__line formats__line--top" aria-hidden="true"></div>
+      <div class="shell formats__grid">
+        <div class="formats__copy">
+          <span class="kicker kicker--light">Mismo origen, rutinas diferentes</span>
+          <h2>Gelatinoso o en cuadros congelados.</h2>
+          <p>El caldo refrigerado tiene textura gelatinosa. Los cuadros congelados son porciones individuales de 30 g pensadas para usar de forma práctica.</p>
+        </div>
+
+        <div class="formats__cards">
+          <article class="format-card format-card--gel">
+            <div class="format-card__image format-card__image--broth"><img loading="lazy" decoding="async" src="{{ product_images['broth-pollo'] }}" alt="Caldo de hueso en bolsa" width="1086" height="1448"></div>
+            <div><span>01</span><strong>Caldo gelatinoso</strong><p>Presentaciones de 200 ml, 500 ml y hasta 4 litros según la línea.</p></div>
+          </article>
+          <article class="format-card format-card--cube">
+            <div class="format-card__image"><img loading="lazy" decoding="async" src="{{ product_images['cuadro-chicken'] }}" alt="Cuadros congelados de caldo de hueso" width="1086" height="1448"></div>
+            <div><span>02</span><strong>Cuadros congelados</strong><p>12, 24 o 48 unidades. Peso indicado por cuadro: 30 g.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="flavors section">
+      <div class="shell">
+        <div class="section-head section-head--compact">
+          <div><span class="kicker">Sabores</span><h2>Dale otro sabor<br>a tu día.</h2></div>
+        </div>
+        <div class="flavor-grid">
+          <article class="flavor-card flavor-card--green">
+            <div class="flavor-card__image"><img loading="lazy" decoding="async" src="{{ product_images['sabor-green'] }}" alt="Green Bone Broth" width="941" height="1672"></div>
+            <div class="flavor-card__copy"><span>Green</span><h3>Kale, espinaca y perejil.</h3><p>1 litro · 500 ml · 200 ml</p><button data-feature-product="sabor-green">Ver producto</button></div>
+          </article>
+          <article class="flavor-card flavor-card--yellow">
+            <div class="flavor-card__image"><img loading="lazy" decoding="async" src="{{ product_images['sabor-turmeric'] }}" alt="Turmeric Bone Broth" width="1024" height="1536"></div>
+            <div class="flavor-card__copy"><span>Turmeric</span><h3>Cúrcuma, tomillo y laurel.</h3><p>1 litro · 500 ml · 200 ml</p><button data-feature-product="sabor-turmeric">Ver producto</button></div>
+          </article>
+          <article class="flavor-card flavor-card--salmon">
+            <div class="flavor-card__image"><img loading="lazy" decoding="async" src="{{ product_images['sabor-mexican'] }}" alt="Mexican Bone Broth" width="1024" height="1536"></div>
+            <div class="flavor-card__copy"><span>Mexican</span><h3>Tomate, pimentón y orégano.</h3><p>1 litro · 500 ml · 200 ml</p><button data-feature-product="sabor-mexican">Ver producto</button></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop section" id="tienda" aria-labelledby="shopTitle">
+      <div class="shell">
+        <div class="shop__head">
+          <div>
+            <span class="kicker">Tienda</span>
+            <h2 id="shopTitle">¿Qué llevamos<br>a tu mesa?</h2>
+            <p>Selecciona una categoría, elige la presentación y agrégala al carrito.</p>
+          </div>
+          <div class="shop__currency"><i></i> Precios en COP</div>
+        </div>
+
+        <div class="shop__toolbar">
+          <div class="filter-row" id="filterRow" role="group" aria-label="Filtrar productos">
+            <button class="filter-chip" data-filter="todos">Todos</button>
+            <button class="filter-chip is-active" data-filter="caldos">Caldos</button>
+            <button class="filter-chip" data-filter="cubos">Cuadros</button>
+            <button class="filter-chip" data-filter="pollo">Pollo</button>
+            <button class="filter-chip" data-filter="marinados">Marinados</button>
+            <button class="filter-chip" data-filter="frescos">Frescos</button>
+          </div>
+          <div class="shop-tools">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 5.13-12.97A7.5 7.5 0 0 1 10.5 18Zm0-13a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Zm10.2 14.8-3.8-3.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <input id="productSearch" type="search" placeholder="Buscar producto" aria-label="Buscar producto">
+            </label>
+            <label class="sort-box">
+              <span>Ordenar</span>
+              <select id="productSort" aria-label="Ordenar productos">
+                <option value="featured">Destacados</option>
+                <option value="price-asc">Menor precio</option>
+                <option value="price-desc">Mayor precio</option>
+                <option value="name-asc">A-Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <div class="shop__meta"><span id="resultCount">0 productos</span><button id="resetFilters" class="reset-link" hidden>Limpiar filtros</button></div>
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="story" id="historia">
+      <div class="story__image" aria-hidden="true"><img loading="lazy" decoding="async" src="/static/a729cfbb8c77bd.webp" alt="" width="1600" height="1067"></div>
+      <div class="story__veil" aria-hidden="true"></div>
+      <div class="story__blob story__blob--yellow" aria-hidden="true"></div>
+      <div class="story__blob story__blob--salmon" aria-hidden="true"></div>
+      <svg class="story__scribble" viewBox="0 0 1200 350" preserveAspectRatio="none" aria-hidden="true"><path d="M20 270C240 120 410 80 590 150s310 100 590-20"/></svg>
+      <div class="shell story__inner">
+        <span class="kicker kicker--light">Nuestra raíz</span>
+        <h2>Herencia campesina que llega a tu mesa.</h2>
+        <p>Campesinos Chiguanos nace en Choachí, Cundinamarca, una tierra de tradición agrícola. Recogemos saberes, sabores y experiencias transmitidas entre generaciones para acercar el campo a la ciudad.</p>
+        <blockquote>“Cosechamos la herencia de nuestros abuelos para cultivar el buen vivir del campo.”</blockquote>
+        <div class="story__values"><span>Herencia</span><span>Bienestar</span><span>Igualdad</span><span>Versatilidad</span></div>
+      </div>
+    </section>
+
+    <section class="how section" id="como-comprar">
+      <div class="shell">
+        <div class="section-head section-head--compact">
+          <div><span class="kicker">Cómo comprar</span><h2>Tres pasos. Más claro no canta un gallo.</h2></div>
+        </div>
+        <div class="steps">
+          <article class="step"><span>01</span><div><h3>Elige</h3><p>Selecciona producto, presentación y cantidad.</p></div></article>
+          <article class="step"><span>02</span><div><h3>Completa</h3><p>Déjanos tus datos de contacto, entrega y medio de pago.</p></div></article>
+          <article class="step"><span>03</span><div><h3>Confirma</h3><p>Revisa el resumen y envíalo por WhatsApp. Te confirmamos disponibilidad y entrega.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="payments section" id="pagos">
+      <div class="shell payments__grid">
+        <div class="payments__copy">
+          <span class="kicker">Medios de pago</span>
+          <h2>Elige cómo pagar.</h2>
+          <p>El pago no se procesa dentro de la web. La confirmación se realiza directamente con Campesinos Chiguanos.</p>
+          <a href="https://wa.me/{{ whatsapp_number }}" target="_blank" rel="noopener noreferrer" class="btn btn--green">Hablar por WhatsApp</a>
+        </div>
+        <div class="payment-cards">
+          <article class="payment-card payment-card--green"><span>A tu manera</span><strong>Nequi, Daviplata<br>o Llave</strong><small>314 2839419</small></article>
+          <article class="payment-card payment-card--yellow"><span>Compra acompañada</span><strong>Link de pago<br>por WhatsApp</strong><small>Tarjeta de crédito / Solicítalo por WhatsApp</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="shell faq__grid">
+        <div class="faq__intro">
+          <span class="kicker">Preguntas frecuentes</span>
+          <h2>Lo importante, sin vueltas.</h2>
+          <p>Información útil antes de confirmar tu pedido.</p>
+        </div>
+        <div class="accordion">
+          <details><summary>¿Qué es el caldo de hueso?</summary><p>Es una base concentrada obtenida mediante cocción lenta de huesos y patas. Puedes tomarla caliente o usarla como base para sopas, arroces, salsas y guisos.</p></details>
+          <details><summary>¿Usan conservantes o saborizantes artificiales?</summary><p>No. Nuestros caldos se preparan con ingredientes naturales, sin conservantes, químicos ni saborizantes artificiales.</p></details>
+          <details><summary>¿Cuál es la diferencia entre el caldo de pollo y el de res?</summary><p>El de pollo tiene un sabor más suave y versátil. El de res ofrece un perfil más intenso, profundo y una textura generalmente más densa.</p></details>
+          <details><summary>¿Cómo puedo tomarlo rápidamente?</summary><p>Calienta una porción del caldo en bolsa o disuelve uno o dos cuadros en agua. Puedes ajustar la intensidad añadiendo agua y usar huevo u otros ingredientes a tu gusto.</p></details>
+          <details><summary>¿Cómo se conserva el caldo de hueso?</summary><p>Sigue las indicaciones de conservación y la fecha de vencimiento de tu empaque. Si tienes alguna duda, escríbenos antes de consumirlo.</p></details>
+          <details><summary>¿El caldo puede verse gelatinoso?</summary><p>Sí. El caldo refrigerado tiene textura gelatinosa. Los cuadros congelados son un formato distinto, presentado en porciones individuales.</p></details>
+          <details><summary>¿Cómo se usan los cuadros congelados?</summary><p>Usa uno para un sabor equilibrado o dos para una preparación más concentrada. Van directo a sopas, arroces, guisos, salsas, jugos y batidos.</p></details>
+          <details><summary>¿Puedo pagar por link?</summary><p>Sí. Selecciona “Link de pago” y solicítalo en la conversación de WhatsApp al finalizar.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-section editorial-section--recipes section" id="recetas" aria-labelledby="recipesTitle">
+      <div class="shell">
+        <div class="editorial-head">
+          <div><span class="kicker">Recetario práctico</span><h2 id="recipesTitle">El buen vivir también cabe en un vaso.</h2></div>
+          <p>Ideas frescas con frutas, verduras y dos cuadros de caldo de hueso. Preparaciones sencillas para descubrir otra forma de disfrutarlo.</p>
+        </div>
+        <div class="recipe-grid">
+          <article class="recipe-card">
+            <img loading="lazy" decoding="async" src="/static/c84f92ab1d61e2.webp?v=20260917-1" alt="Jugo verde de manzana, pepino y limón" width="720" height="560">
+            <div><span>Fresco y cítrico</span><h3>Manzana verde, pepino y limón</h3><p>½ pepino, una manzana verde, limón y dos cuadros del sabor que prefieras.</p><small>Rinde 1 vaso</small></div>
+          </article>
+          <article class="recipe-card">
+            <img loading="lazy" decoding="async" src="/static/d75e03bc2a74f1.webp?v=20260917-1" alt="Jugo de remolacha y naranja" width="720" height="560">
+            <div><span>Color de la tierra</span><h3>Remolacha y naranja</h3><p>Dos naranjas, una remolacha pequeña y dos cuadros de caldo de hueso.</p><small>Rinde 1 vaso</small></div>
+          </article>
+          <article class="recipe-card">
+            <img loading="lazy" decoding="async" src="/static/e91a47cd3b28f0.webp?v=20260917-1" alt="Jugo de zanahoria, pepino y jengibre" width="720" height="560">
+            <div><span>Intenso y aromático</span><h3>Zanahoria, pepino y jengibre</h3><p>Zanahoria, manzana, pepino, jengibre, limón y dos cuadros de caldo.</p><small>Rinde 2 vasos</small></div>
+          </article>
+        </div>
+        <div class="editorial-action"><a class="btn btn--green" href="https://drive.google.com/file/d/1h4SPveUqyThwzIeikqN8naH-s1zAuL-7/view?usp=share_link" target="_blank" rel="noopener noreferrer">Abrir recetario</a></div>
+      </div>
+    </section>
+
+    <section class="editorial-section editorial-section--news section" id="noticias" aria-labelledby="newsTitle">
+      <div class="shell">
+        <div class="editorial-head">
+          <div><span class="kicker kicker--light">Noticias y tendencias</span><h2 id="newsTitle">Un alimento de siempre en la conversación actual.</h2></div>
+          <p>Una selección cultural de lecturas sobre cómo el caldo de hueso pasó de la cocina tradicional a los medios, las redes y las rutinas contemporáneas.</p>
+        </div>
+        <div class="news-grid">
+          <article class="news-card"><span>01 · Tendencia</span><h3>De “caldito de casa” a conversación global</h3><p>Distintos medios cuentan cómo una preparación tradicional volvió a ganar atención alrededor de la cocina lenta, la rutina y el bienestar.</p></article>
+          <article class="news-card"><span>02 · Cultura</span><h3>El ritual cotidiano que llegó a la cultura pop</h3><p>Recetas, hábitos matutinos y figuras conocidas han convertido una taza caliente en un tema frecuente de revistas y redes.</p></article>
+          <article class="news-card"><span>03 · Lecturas</span><h3>Colágeno, cocina y curiosidad</h3><p>La guía reúne miradas populares sobre preparación, estilo de vida y tendencias. Su contenido es informativo y no reemplaza orientación profesional.</p></article>
+        </div>
+        <div class="editorial-action editorial-action--light"><a class="btn btn--yellow" href="https://drive.google.com/file/d/1q16-WSidRVxHrEo0edcUI1zoK1uBDieR/view?usp=share_link" target="_blank" rel="noopener noreferrer">Ver todas las lecturas</a></div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="shell final-cta__inner">
+        <div>
+          <span class="kicker kicker--light">Cosechando nuestra herencia</span>
+          <h2>¿Listo para armar tu pedido?</h2>
+        </div>
+        <div class="final-cta__actions">
+          <a class="btn btn--yellow" href="#tienda">Ir a la tienda</a>
+          <a class="btn btn--outline-light" href="https://wa.me/{{ whatsapp_number }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__grid">
+      <div class="footer__brand-card">
+        <img loading="lazy" decoding="async" src="/static/106257159cb5f8.png" alt="Campesinos Chiguanos" width="640" height="640">
+      </div>
+      <div><h3>Productos</h3><a href="#tienda" data-footer-filter="caldos">Caldos</a><a href="#tienda" data-footer-filter="cubos">Cuadros</a><a href="#tienda" data-footer-filter="pollo">Pollo</a><a href="#tienda" data-footer-filter="marinados">Marinados</a></div>
+      <div><h3>Ayuda</h3><a href="#como-comprar">Cómo comprar</a><a href="#pagos">Medios de pago</a><a href="#faq">Preguntas frecuentes</a><a href="#recetas">Recetario</a><a href="#noticias">Noticias</a></div>
+      <div><h3>Contacto</h3><a href="https://wa.me/{{ whatsapp_number }}" target="_blank" rel="noopener noreferrer">WhatsApp +57 313 204 6536</a><span>Despachos en Bogotá y nacional</span></div>
+      <div class="footer__social" aria-label="Redes sociales"><h3>Síguenos</h3><div><a href="https://www.facebook.com/campesinoschiguanoscol" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/campesinoschiguanos" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://whatsapp.com/channel/0029Vb7FJnC7T8bVCfTV4y45" target="_blank" rel="noopener noreferrer">Canal de WhatsApp</a><a href="https://www.threads.net/@campesinoschiguanos" target="_blank" rel="noopener noreferrer">Threads</a><a href="https://www.tiktok.com/@campesinoschiguanos" target="_blank" rel="noopener noreferrer">TikTok</a></div></div>
+    </div>
+    <div class="shell footer__bottom"><span>© <span id="year"></span> Campesinos Chiguanos.</span><span>Cosechando nuestra herencia.</span></div>
+  </footer>
+
+  <div class="mobile-actions" aria-label="Acciones rápidas">
+    <button id="mobileCart"><span>Carrito</span><b id="mobileCartCount">0</b></button>
+    <a href="https://wa.me/{{ whatsapp_number }}" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+
+  <button class="whatsapp-float" id="whatsappFloat" aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11 20L3 29l6.2-2A13 13 0 1 0 16 3Zm0 23.5c-2 0-3.8-.5-5.4-1.5l-.4-.2-3.7 1.2 1.2-3.6-.2-.4A10.5 10.5 0 1 1 16 26.5Zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-1.9-.9-3.1-1.7-4.4-3.9-.3-.6.3-.6.9-1.9.1-.2.1-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5-.3.4-1.3 1.3-1.3 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.8 2.5 1.1 3.5 1.2 4.8 1 .8-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.2-.3-.5-.4-.8-.5Z"/></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" inert aria-hidden="true" aria-labelledby="cartTitle">
+    <div class="cart-drawer__head">
+      <div><span class="cart-overline">Tu selección</span><h2 id="cartTitle">Mi pedido</h2></div>
+      <button class="icon-btn" id="closeCart" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div class="cart-drawer__body"><div id="cartItems"></div><section id="cartBenefits" aria-live="polite" aria-label="Beneficios de tu pedido"></section><div id="cartRecommendation"></div></div>
+    <div class="cart-drawer__foot">
+      <div class="cart-summary">
+        <div><span>Subtotal productos</span><strong id="cartSubtotal">$0</strong></div>
+        <div><span>Domicilio</span><strong id="cartShipping">$0</strong></div>
+        <div class="cart-summary__total"><span>Total estimado</span><strong id="cartTotal">$0</strong></div>
+      </div>
+      <p id="shippingNote" class="cart-note"></p>
+      <button class="btn btn--yellow btn--full cart-checkout" id="goCheckout">Continuar pedido</button>
+      <button class="clear-cart" id="clearCart">Vaciar carrito</button>
+    </div>
+  </aside>
+
+  <div class="modal" id="productModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+    <div class="modal__backdrop" data-close-modal="productModal"></div>
+    <div class="modal__panel product-modal__panel">
+      <button class="icon-btn modal__close" data-close-modal="productModal" aria-label="Cerrar">×</button>
+      <div id="productModalContent"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="checkoutModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal__backdrop" data-close-modal="checkoutModal"></div>
+    <div class="modal__panel checkout-panel">
+      <button class="icon-btn modal__close" data-close-modal="checkoutModal" aria-label="Cerrar">×</button>
+      <div class="checkout-head">
+        <span class="kicker">Finalizar pedido</span>
+        <h2 id="checkoutTitle">Datos para la entrega.</h2>
+        <p>Completa los campos obligatorios marcados con *.</p>
+      </div>
+      <form id="checkoutForm">
+        <section class="checkout-step">
+          <div class="checkout-step__number">01</div>
+          <div class="checkout-step__content">
+            <h3>Datos de contacto</h3>
+            <div class="form-grid form-grid--2">
+              <label><span>Nombre(s) *</span><input id="firstNames" maxlength="80" autocomplete="given-name" required></label>
+              <label><span>Apellidos *</span><input id="lastNames" maxlength="80" autocomplete="family-name" required></label>
+              <label class="span-2"><span>Teléfono de contacto *</span><input required id="contactPhone" maxlength="25" inputmode="tel" autocomplete="tel"></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout-step">
+          <div class="checkout-step__number">02</div>
+          <div class="checkout-step__content">
+            <h3>Entrega</h3>
+            <div class="form-grid form-grid--2">
+              <label><span>Ciudad de entrega *</span><select id="city" required><option value="">Selecciona tu ciudad</option><option value="bogota">Bogotá</option><option value="chia">Chía</option><option value="cajica">Cajicá</option><option value="cota">Cota</option><option value="soacha">Soacha</option></select></label>
+              <label><span>Barrio *</span><input id="neighborhood" maxlength="80" required></label>
+              <p id="deliveryCityNotice" class="delivery-city-notice span-2" role="status" aria-live="polite" hidden></p>
+              <label class="span-2"><span>Dirección de entrega *</span><input id="address" maxlength="180" autocomplete="street-address" placeholder="Ej. Carrera 00 # 00-00" required></label>
+              <label class="span-2"><span>Tipo de vivienda *</span><select id="propertyType" required><option value="">Selecciona dónde entregamos</option><option value="casa">Casa</option><option value="apartamento">Conjunto/Edificio</option></select></label>
+              <label id="houseField" hidden><span>Número de casa / Interior (opcional)</span><input id="houseNumber" maxlength="30" placeholder="Ej. Casa 8"></label>
+              <label data-apartment-field hidden><span>Nombre del conjunto / edificio *</span><input id="building" maxlength="80"></label>
+              <label data-apartment-field hidden><span>Torre / Bloque</span><input id="tower" maxlength="30"></label>
+              <label data-apartment-field hidden><span>Apartamento / Interior</span><input id="apartment" maxlength="30"></label>
+              <label id="floorField" hidden><span>Piso (opcional)</span><input id="floor" maxlength="15"></label>
+              <label class="span-2"><span>Indicaciones para encontrar la dirección</span><textarea id="deliveryNotes" maxlength="200" rows="3" placeholder="Portería, referencia cercana, color de la casa, etc."></textarea></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="address-map" aria-labelledby="mapHeading" data-embed-key="{{ maps_embed_key }}">
+          <div class="address-map__icon" aria-hidden="true">⌖</div>
+          <div><h3 id="mapHeading">Que tu pedido llegue al lugar correcto.</h3>
+          <p id="mapAddress" aria-live="polite">Escribe la dirección y selecciona la ciudad. El mapa aparecerá aquí.</p>
+          <a id="addressMaps" class="map-link" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1">Ver dirección en Google Maps ↗</a>
+          <p class="form-footnote">El mapa se actualiza al escribir y comparte la dirección con Google. Comprueba que el lugar señalado sea correcto antes de continuar.</p></div>
+          <div id="mapPlaceholder" class="map-placeholder" role="status">Tu ubicación de entrega aparecerá aquí.</div>
+          <iframe id="addressMapFrame" title="Ubicación de entrega en Google Maps" hidden referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section class="checkout-step">
+          <div class="checkout-step__number">03</div>
+          <div class="checkout-step__content">
+            <h3>Medio de pago</h3>
+            <div class="payment-options">
+              <label><input type="radio" name="payment" value="nequi" required><span><strong>Nequi</strong><small>314 2839419</small></span></label>
+              <label><input type="radio" name="payment" value="daviplata" required><span><strong>Daviplata</strong><small>314 2839419</small></span></label>
+              <label><input type="radio" name="payment" value="llave" required><span><strong>Llave</strong><small>314 2839419</small></span></label>
+              <label><input type="radio" name="payment" value="efectivo" required><span><strong>Pago en efectivo</strong><small>Confírmalo por WhatsApp</small></span></label>
+              <label><input type="radio" name="payment" value="link" required><span><strong>Link de pago</strong><small>Tarjeta de crédito / Solicítalo por WhatsApp</small></span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="checkout-step checkout-step--summary">
+          <div class="checkout-step__number">04</div>
+          <div class="checkout-step__content">
+            <h3>Revisa y confirma</h3>
+            <div class="checkout-recap" id="checkoutRecap"></div><p id="deliveryEstimate" class="delivery-estimate" aria-live="polite">Selecciona tu ciudad para ver la entrega estimada.</p>
+            <label class="check-label"><input type="checkbox" id="confirmData" required><span>Revisé mi pedido y la información de entrega.</span></label>
+            <button class="btn btn--green btn--full btn--large" type="submit" id="submitQuote">Revisar pedido</button>
+            <p class="form-footnote">Al continuar calculamos tu cotización. Después podrás enviarla por WhatsApp; aún no se realiza ningún pago.</p>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  
+
+<div class="modal" id="quoteModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+ <div class="modal__backdrop" data-close-modal="quoteModal"></div>
+ <div class="modal__panel quote-panel"><button class="icon-btn modal__close" data-close-modal="quoteModal" aria-label="Cerrar resumen">×</button>
+ <span class="kicker">Un paso más y conversamos</span><h2 id="quoteTitle">Tu pedido,<br>listo para enviar.</h2>
+ <p>Revisa la cotización. Te confirmaremos disponibilidad y valor final por WhatsApp.</p>
+ <div id="quoteDetails" class="quote-details" aria-label="Resumen completo del pedido"></div>
+ <a id="quoteMaps" class="map-link" target="_blank" rel="noopener noreferrer">Revisar la dirección en Google Maps ↗</a>
+ <div class="final-review"><span class="kicker">Última revisión</span><h3>¿Todo está como lo quieres?</h3>
+ <p>Comprueba los productos, las presentaciones, las cantidades, el total, el medio de pago y la dirección.</p>
+ <label class="check-label"><input type="checkbox" id="confirmFinal"><span>He revisado este resumen y confirmo que mi pedido y los datos de entrega son correctos.</span></label>
+ </div>
+ <button type="button" id="editQuote" class="btn btn--edit">← Volver y corregir</button>
+ <a id="quoteWhatsApp" target="_blank" rel="noopener noreferrer" aria-disabled="true" tabindex="-1" class="btn btn--green btn--full">Enviar pedido por WhatsApp</a>
+ <button type="button" id="copyOrder" disabled class="btn btn--soft btn--full">Copiar pedido</button>
+ <div id="copyFollowup" class="copy-followup" aria-live="polite" hidden><strong>✓ Pedido copiado</strong><span>Cuando hayas terminado de enviarlo, puedes finalizar el pedido.</span><button type="button" id="finishCopiedOrder" class="text-action">Finalizar pedido</button></div>
+ <p id="finalReviewStatus" class="form-footnote" aria-live="polite">Marca la casilla para habilitar el envío.</p>
+ <p class="form-footnote">Debes pulsar copiar o enviar por WhatsApp. Tu carrito sigue guardado y todavía no se ha realizado ningún pago.</p>
+ <button type="button" id="cancelOrder" class="text-action text-action--quiet">Cancelar y vaciar pedido</button>
+ </div></div>
+
+<div class="modal" id="sentConfirmationModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="sentConfirmationTitle">
+ <div class="modal__backdrop" data-close-modal="sentConfirmationModal"></div>
+ <div class="modal__panel decision-panel"><button class="icon-btn modal__close" data-close-modal="sentConfirmationModal" aria-label="Cerrar">×</button>
+  <span class="decision-panel__icon" aria-hidden="true">✓</span><h2 id="sentConfirmationTitle">¿Ya enviaste tu pedido?</h2>
+  <p>Si el pedido ya fue enviado por WhatsApp, finalízalo para dejar tu tienda lista para una nueva compra.</p>
+  <button type="button" id="confirmSentOrder" class="btn btn--green btn--full">✓ Sí, finalizar pedido</button>
+  <button type="button" id="returnToOrder" class="btn btn--soft btn--full">Aún no, volver al pedido</button>
+ </div>
+</div>
+
+<div class="modal" id="finishOrderModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="finishOrderTitle">
+ <div class="modal__backdrop" data-close-modal="finishOrderModal"></div>
+ <div class="modal__panel decision-panel"><button class="icon-btn modal__close" data-close-modal="finishOrderModal" aria-label="Cerrar">×</button>
+  <h2 id="finishOrderTitle">¿Finalizar este pedido?</h2>
+  <p>Una vez finalizado, el carrito y los datos de esta compra se limpiarán.</p>
+  <button type="button" id="finishOrder" class="btn btn--green btn--full">Finalizar pedido</button>
+  <button type="button" id="cancelFinish" class="btn btn--soft btn--full">Cancelar</button>
+ </div>
+</div>
+
+<div class="modal" id="cancelOrderModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cancelOrderTitle">
+ <div class="modal__backdrop" data-close-modal="cancelOrderModal"></div>
+ <div class="modal__panel decision-panel"><button class="icon-btn modal__close" data-close-modal="cancelOrderModal" aria-label="Cerrar">×</button>
+  <h2 id="cancelOrderTitle">¿Eliminar este pedido?</h2>
+  <p>Se borrarán los productos y los datos ingresados. Esta acción no se puede deshacer.</p>
+  <button type="button" id="emptyOrder" class="btn btn--confirm-danger btn--full">Sí, vaciar pedido</button>
+  <button type="button" id="keepOrder" class="btn btn--soft btn--full">No, conservar pedido</button>
+ </div>
+</div>
+
+<div class="modal" id="orderSuccessModal" inert aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="orderSuccessTitle">
+ <div class="modal__backdrop"></div>
+ <div class="modal__panel success-panel"><span class="success-panel__icon" aria-hidden="true">✓</span>
+  <h2 id="orderSuccessTitle">Pedido finalizado</h2><p>Gracias por comprar en Campesinos Chiguanos.</p>
+  <span>Tu tienda ya está lista para una nueva compra.</span>
+  <button type="button" id="newOrder" class="btn btn--yellow btn--full">Hacer un nuevo pedido</button>
+ </div>
+</div>
+
+<script src="/static/app.js?v={{ asset_version }}" type="module"></script></body>
+</html>

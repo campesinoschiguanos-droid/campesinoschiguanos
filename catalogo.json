@@ -1,0 +1,1240 @@
+{
+  "broths": {
+    "titulo": "Bone Broths",
+    "emoji": "🍗",
+    "tag": "Cocinados a fuego lento",
+    "desc": "Caldos de hueso concentrados y nutritivos, cocinados por horas al estilo campesino. Disponibles en presentaciones de 1 litro, 500 ml y 200 ml.",
+    "productos": [
+      {
+        "id": "broth-pollo",
+        "nombre": "Chicken Bone Broth",
+        "emoji": "🍗",
+        "desc": "Caldo de hueso de pollo en estado gelatinoso.",
+        "detalle": "Sabor suave, ligero y versátil, con una textura menos densa que el caldo de res. Contiene colágeno tipo II y aminoácidos como glicina y prolina, presentes naturalmente en esta preparación.",
+        "imagen": "/static/e34629c6bf8769f3.webp",
+        "etiqueta": "Chicken Bone Broth",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Ingredientes: Hueso de pollo, patas de pollo, cebolla larga, apio, zanahoria, raíz de cilantro, pimienta y vinagre de cidra.",
+          "Cómo usarlo: tómalo caliente o úsalo en sopas claras, salsas suaves, arroces, ajiacos y sudados.",
+          "Cómo puede acompañarte: es una opción ligera y fácil de incorporar a rutinas de alimentación variadas.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 37000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "2 litros",
+            "precio": 72000,
+            "ml": 2000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "3 litros",
+            "precio": 110000,
+            "ml": 3000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "4 litros",
+            "precio": 140000,
+            "ml": 4000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9000,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "broth-beef",
+        "nombre": "Beef Bone Broth",
+        "emoji": "🍗",
+        "desc": "Caldo de hueso de res en estado gelatinoso.",
+        "detalle": "Sabor fuerte, concentrado y profundo, con una textura más densa y abundante gelatina natural. Contiene colágeno tipo I y III y minerales presentes naturalmente en los ingredientes.",
+        "imagen": "/static/cb84ce9a7ecf2556.webp",
+        "etiqueta": "Beef Bone Broth",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Ingredientes: Hueso de res, apio, cebolla larga, zanahoria, raíz de cilantro, pimienta y vinagre de cidra.",
+          "Cómo usarlo: aporta cuerpo a guisos, ramen, estofados, sopas robustas, arroces y fondos.",
+          "Cómo puede acompañarte: su perfil sustancioso resulta ideal para comidas completas y preparaciones de sabor intenso.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 40000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "2 litros",
+            "precio": 78000,
+            "ml": 2000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "3 litros",
+            "precio": 115000,
+            "ml": 3000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "4 litros",
+            "precio": 150000,
+            "ml": 4000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 21000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 10000,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "combo-sabores",
+        "nombre": "Combo de sabores",
+        "emoji": "🍗",
+        "desc": "Pollo, res, Green, Mexican y Turmeric en una sola compra.",
+        "detalle": "Cinco perfiles de caldo de hueso para variar durante la semana y elegir una base distinta según cada receta o momento del día.",
+        "imagen": "/static/a4952a7c27c0d904.webp",
+        "etiqueta": "Combo",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Incluye pollo, res, Green, Mexican y Turmeric.",
+          "Cómo usarlo: alterna los sabores en bebidas calientes, sopas, arroces, guisos y salsas.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Combo 1 litro",
+            "precio": 180000,
+            "ml": 5000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "Combo 500 ml",
+            "precio": 93000,
+            "ml": 2500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "Combo 200 ml",
+            "precio": 39000,
+            "ml": 1000,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "broth-dual",
+        "nombre": "Dual Broth",
+        "emoji": "🍗",
+        "desc": "La suavidad del pollo y la profundidad de la res en una sola preparación.",
+        "detalle": "Combina la suavidad del pollo con la profundidad de la res para lograr un caldo equilibrado, gelatinoso y versátil, sin sal ni conservantes.",
+        "imagen": "/static/5bbb728c619b0cb0.webp",
+        "etiqueta": "Pollo + res",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Cómo usarlo: bébelo caliente o úsalo como base para sopas, guisos, arroces y salsas.",
+          "Cómo puede acompañarte: reúne en una sola preparación dos perfiles de sabor y distintos tipos de colágeno presentes naturalmente.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 39000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "2 litros",
+            "precio": 76000,
+            "ml": 2000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "3 litros",
+            "precio": 113000,
+            "ml": 3000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "4 litros",
+            "precio": 145000,
+            "ml": 4000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20500,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9500,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "broth-pollo-neutro",
+        "nombre": "Chicken Bone Broth Neutro",
+        "emoji": "🍗",
+        "desc": "Perfil neutro elaborado solo con pata y hueso.",
+        "detalle": "Caldo de pollo de perfil neutro, elaborado con pata y hueso para que puedas sazonarlo y adaptarlo con facilidad a recetas dulces o saladas.",
+        "imagen": "/static/0a424bffa475761d.webp",
+        "etiqueta": "100% hueso",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Cómo usarlo: personalízalo con hierbas, especias o vegetales; funciona en sopas, arroces, salsas y bebidas calientes.",
+          "Cómo puede acompañarte: ofrece una base suave para controlar el sabor y el nivel de sal de cada preparación.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 37000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9000,
+            "ml": 200,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "2 litros",
+            "precio": 72000,
+            "ml": 2000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "3 litros",
+            "precio": 110000,
+            "ml": 3000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "4 litros",
+            "precio": 140000,
+            "ml": 4000,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "sabores": {
+    "titulo": "Bone Broths de sabores",
+    "emoji": "🌿",
+    "tag": "Recetas especiales",
+    "desc": "Nuestras recetas de la casa con ingredientes naturales del campo. Disponibles en presentaciones de 1 litro, 500 ml y 200 ml.",
+    "productos": [
+      {
+        "id": "sabor-green",
+        "nombre": "Green Bone Broth",
+        "emoji": "🌿",
+        "desc": "Caldo de hueso con kale, espinaca y perejil.",
+        "detalle": "El kale, la espinaca y el perejil aportan un perfil vegetal fresco sobre una base de caldo de hueso de pollo.",
+        "imagen": "/static/72c43ce1005fece3.webp",
+        "etiqueta": "Sabor",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Cómo usarlo: en cremas de verduras, arroces verdes, sopas, salsas o como bebida caliente.",
+          "Cómo puede acompañarte: facilita dar sabor y profundidad a tus recetas sin preparar un fondo desde cero.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 37000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9000,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "sabor-turmeric",
+        "nombre": "Turmeric Bone Broth",
+        "emoji": "🌿",
+        "desc": "Caldo de hueso con cúrcuma, tomillo y laurel.",
+        "detalle": "La cúrcuma, el tomillo y el laurel crean un perfil cálido y aromático sobre una base de caldo de hueso de pollo.",
+        "imagen": "/static/ab7b4a06d100a5f7.webp",
+        "etiqueta": "Sabor",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Cómo usarlo: en arroces, legumbres, curris suaves, sopas, guisos o como bebida caliente.",
+          "Cómo puede acompañarte: facilita dar sabor y profundidad a tus recetas sin preparar un fondo desde cero.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 37000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9000,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "sabor-mexican",
+        "nombre": "Mexican Bone Broth",
+        "emoji": "🌿",
+        "desc": "Caldo de hueso con tomate, pimentón y orégano.",
+        "detalle": "El tomate, el pimentón y el orégano crean un perfil cálido y familiar sobre una base de caldo de hueso de pollo.",
+        "imagen": "/static/4c0f5e19ff2347dd.webp",
+        "etiqueta": "Sabor",
+        "categoriaVisual": "caldos",
+        "hechos": [
+          "Cómo usarlo: en fríjoles, arroces, sopas, guisos, salsas y preparaciones de inspiración mexicana.",
+          "Cómo puede acompañarte: facilita dar sabor y profundidad a tus recetas sin preparar un fondo desde cero.",
+          "Conservación: Hasta 1 año en congelación y hasta 15 días en refrigeración."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 litro",
+            "precio": 37000,
+            "ml": 1000,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "500 ml",
+            "precio": 20000,
+            "ml": 500,
+            "unidades": 0
+          },
+          {
+            "etiqueta": "200 ml",
+            "precio": 9000,
+            "ml": 200,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "cubos": {
+    "titulo": "Cuadros congelados",
+    "emoji": "🧊",
+    "tag": "Prácticos y listos",
+    "desc": "Todos nuestros sabores en cuadros congelados: solo agrégalos a tus preparaciones. Disponibles en paquetes de 12, 24 y 48 unidades.",
+    "productos": [
+      {
+        "id": "cuadro-chicken",
+        "nombre": "Cuadros de caldo · Pollo",
+        "emoji": "🧊",
+        "desc": "Cuadros congelados de caldo de hueso de pollo. 30 g por unidad.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/51d0d3cd8ef2dfe1.webp",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros de Pollo a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 25000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 48000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 90000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-beef",
+        "nombre": "Cuadros de caldo · Res",
+        "emoji": "🧊",
+        "desc": "Cuadros congelados de caldo de hueso de res. 30 g por unidad.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/cbc2bf374b5c755d.webp",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros de Res a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 30000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 58000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 110000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-dual",
+        "nombre": "Cuadros Dual",
+        "emoji": "🧊",
+        "desc": "Cuadros congelados de caldo de hueso de pollo y res. 30 g por unidad.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/51cd6ff81b826133.png",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros Dual a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Domicilio: $7.000 para 12 o 24 unidades; gratis desde 48 unidades. Si combinas productos, se aplica la mejor tarifa alcanzada por todo el pedido.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 27000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 53000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 100000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-green",
+        "nombre": "Cuadros Green",
+        "emoji": "🧊",
+        "desc": "Formato congelado del perfil Green.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/ee144d9fc93688cc.png",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros de Green a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 25000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 48000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 90000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-turmeric",
+        "nombre": "Cuadros Turmeric",
+        "emoji": "🧊",
+        "desc": "Formato congelado del perfil Turmeric.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/1b2315df4bfc3d25.webp",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros de Turmeric a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 25000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 48000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 90000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-mexican",
+        "nombre": "Cuadros Mexican",
+        "emoji": "🧊",
+        "desc": "Formato congelado del perfil Mexican.",
+        "detalle": "Porciones individuales de 30 g que permiten usar solo la cantidad necesaria, sin descongelar una presentación completa.",
+        "imagen": "/static/db0f01b89bc3b6ee.webp",
+        "etiqueta": "Congelados",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Versatilidad: agrega uno o varios cuadros de Mexican a sopas, arroces, guisos, salsas o agua caliente. También puedes incorporarlos en batidos con frutas y vegetales; ajusta la cantidad al sabor que prefieras.",
+          "Cómo puede ayudarte: ahorra tiempo, facilita dosificar y mantiene diferentes sabores listos en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 25000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 48000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 90000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "cuadro-aloe",
+        "nombre": "Aloe vera · Sábila",
+        "emoji": "🧊",
+        "desc": "Aloe vera presentado en cubos de 30 g.",
+        "detalle": "Cubos individuales de aloe vera de 30 g, prácticos para dosificar y combinar con bebidas o preparaciones frescas.",
+        "imagen": "/static/1763e6b4e5c3a8a1.webp",
+        "etiqueta": "Congelado",
+        "categoriaVisual": "cubos",
+        "hechos": [
+          "Cómo usarlo: incorpora un cubo en jugos, batidos o preparaciones con frutas y vegetales.",
+          "Cómo puede ayudarte: facilita porcionar el aloe y tenerlo listo en el congelador.",
+          "Conservación: Hasta 1 año en congelación."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "12 unidades",
+            "precio": 28000,
+            "ml": 0,
+            "unidades": 12
+          },
+          {
+            "etiqueta": "24 unidades",
+            "precio": 50000,
+            "ml": 0,
+            "unidades": 24
+          },
+          {
+            "etiqueta": "48 unidades",
+            "precio": 96000,
+            "ml": 0,
+            "unidades": 48
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "cortesPollo": {
+    "titulo": "Cortes de pollo",
+    "emoji": "🐔",
+    "tag": "Frescos cada día",
+    "desc": "Cortes frescos de pollo de nuestra propia producción. Precios por kilogramo. El pollo entero se agrega por unidad y se cobra según su peso final.",
+    "productos": [
+      {
+        "id": "cp-pechuga",
+        "nombre": "Pechuga",
+        "emoji": "🐔",
+        "desc": "Corte clásico de pechuga.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/d6d5b6b84e8ad34d.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 24900,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-pechugasp",
+        "nombre": "Pechuga sin piel",
+        "emoji": "🐔",
+        "desc": "Pechuga sin piel, vendida por kilo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/8168540310ba73f0.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 27100,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-filete",
+        "nombre": "Filete de pechuga",
+        "emoji": "🐔",
+        "desc": "Filete de pechuga listo para tus preparaciones.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/243059044df62dbf.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 31700,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-alaentera",
+        "nombre": "Ala entera",
+        "emoji": "🐔",
+        "desc": "Ala entera de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/a1a1e002.jpg",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 20800,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-alasinpunta",
+        "nombre": "Ala sin punta",
+        "emoji": "🐔",
+        "desc": "Ala de pollo sin punta.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/15a94bf6f030a959.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 22000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-pierna",
+        "nombre": "Pierna pernil",
+        "emoji": "🐔",
+        "desc": "Pierna pernil de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/4c3bc342df8a199c.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 20800,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-pierna-sin-piel",
+        "nombre": "Pierna pernil sin piel",
+        "emoji": "🐔",
+        "desc": "Pierna pernil sin piel de pollo, vendido por kilo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/2de0df01459f5293.png",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 21800,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-muslo",
+        "nombre": "Muslo",
+        "emoji": "🐔",
+        "desc": "Muslo de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/d77cc3fa9c65a392.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 21800,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-muslo-sin-piel",
+        "nombre": "Muslo sin piel",
+        "emoji": "🐔",
+        "desc": "Muslo sin piel de pollo, vendido por kilo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/e2ba0fd5ef696ab4.png",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 22800,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-contramuslo",
+        "nombre": "Contramuslo",
+        "emoji": "🐔",
+        "desc": "Contramuslo de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/1bc6ed69981405ff.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 21600,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-contramuslo-sin-piel",
+        "nombre": "Contramuslo sin piel",
+        "emoji": "🐔",
+        "desc": "Contramuslo sin piel de pollo, vendido por kilo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/9f32ecf34bbf284a.png",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 22600,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-churrasco",
+        "nombre": "Churrasco de pollo",
+        "emoji": "🐔",
+        "desc": "Churrasco de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/ac3a6d2c38b7f990.webp",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 26400,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "cp-entero",
+        "nombre": "Pollo entero",
+        "emoji": "🐔",
+        "desc": "Precio por kilo. Cada unidad que agregas equivale a un pollo entero. El valor final depende de su peso.",
+        "detalle": "Pollo entero para preparar al horno, a la parrilla o en tus recetas caseras. El precio publicado es por kilo, pero eliges cuántos pollos enteros quieres recibir.",
+        "imagen": "/static/a1a1e001.jpg",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo pedirlo: selecciona 1 para recibir un pollo entero, 2 para recibir dos, y así sucesivamente. La cantidad corresponde a pollos, no a kilos.",
+          "Precio por kilo: el valor final se calcula según el peso real de los pollos. Confirmaremos precio y entrega por WhatsApp.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 pollo entero · Precio por kilo",
+            "precio": 17500,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      }
+    ]
+  },
+  "cortes": {
+    "titulo": "Cortes personalizados de pollo",
+    "emoji": "🔪",
+    "tag": "Fresco y a tu medida",
+    "desc": "Pollo fresco cortado como lo necesites, con la calidad de siempre. Precios por kilogramo.",
+    "productos": [
+      {
+        "id": "corte-anillos",
+        "nombre": "Corte personalizado · Anillos",
+        "emoji": "🔪",
+        "desc": "Pollo cortado en anillos.",
+        "detalle": "Corte personalizado que reduce el tiempo de preparación y te permite llevar el pollo listo para la receta que tienes en mente.",
+        "imagen": "/static/5aaecdbf244142e2.webp",
+        "etiqueta": "Personalizado",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: perfecto para salteados, sopas, arroces, tacos, pastas o preparaciones rápidas.",
+          "Cómo puede ayudarte: ofrece porciones uniformes, cocción más pareja y menos trabajo en la cocina."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Paquete 250 g",
+            "precio": 10000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "corte-cubos",
+        "nombre": "Corte personalizado · Cubos",
+        "emoji": "🔪",
+        "desc": "Pollo cortado en cubos.",
+        "detalle": "Corte personalizado que reduce el tiempo de preparación y te permite llevar el pollo listo para la receta que tienes en mente.",
+        "imagen": "/static/e37c64b090e266db.webp",
+        "etiqueta": "Personalizado",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: perfecto para salteados, sopas, arroces, tacos, pastas o preparaciones rápidas.",
+          "Cómo puede ayudarte: ofrece porciones uniformes, cocción más pareja y menos trabajo en la cocina."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Paquete 250 g",
+            "precio": 10000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "corte-julianas",
+        "nombre": "Corte personalizado · Julianas",
+        "emoji": "🔪",
+        "desc": "Pollo cortado en julianas.",
+        "detalle": "Corte personalizado que reduce el tiempo de preparación y te permite llevar el pollo listo para la receta que tienes en mente.",
+        "imagen": "/static/20fea80a5a21b9c3.webp",
+        "etiqueta": "Personalizado",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: perfecto para salteados, sopas, arroces, tacos, pastas o preparaciones rápidas.",
+          "Cómo puede ayudarte: ofrece porciones uniformes, cocción más pareja y menos trabajo en la cocina."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Paquete 250 g",
+            "precio": 10000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "corte-molida",
+        "nombre": "Filete molido",
+        "emoji": "🔪",
+        "desc": "Filete de pollo molido.",
+        "detalle": "Corte personalizado que reduce el tiempo de preparación y te permite llevar el pollo listo para la receta que tienes en mente.",
+        "imagen": "/static/27c72c18bc5e9c0c.webp",
+        "etiqueta": "Personalizado",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: perfecto para salteados, sopas, arroces, tacos, pastas o preparaciones rápidas.",
+          "Cómo puede ayudarte: ofrece porciones uniformes, cocción más pareja y menos trabajo en la cocina."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Paquete 250 g",
+            "precio": 10000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "marinados": {
+    "titulo": "Cortes marinados",
+    "emoji": "🔥",
+    "tag": "Recetas de la casa",
+    "desc": "Nuestros cortes marinados con especias naturales, listos para la parrilla. Precios por kilogramo.",
+    "productos": [
+      {
+        "id": "mar-alas",
+        "nombre": "Alas Fuego Campesinas",
+        "emoji": "🔥",
+        "desc": "Crujientes, jugosas y con actitud.",
+        "detalle": "Alas marinadas con sal marina, paprika, azúcar morena, cúrcuma, pimienta negra, achiote, pimentón ahumado, chile y romero.",
+        "imagen": "/static/6d9aa1885b04f0.webp",
+        "etiqueta": "Marinado campesino",
+        "categoriaVisual": "marinados",
+        "hechos": [
+          "Listo para cocinar: llévalo directamente a la parrilla, sartén, horno o air fryer y acompáñalo con ensalada, papa, arroz o vegetales.",
+          "Peso aprox.: 500 g.",
+          "Cantidad: 4 unidades.",
+          "Preparación: 30 min a 200 °C en Air Fryer."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 paquete",
+            "precio": 13000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "mar-filete",
+        "nombre": "Filete Dorado del Campo",
+        "emoji": "🔥",
+        "desc": "Natural, suave y lleno de vida.",
+        "detalle": "Filete marinado con sal marina, ajo, jengibre, paprika ahumada, pimienta negra, cúrcuma, cebolla, pimienta dulce, coriandro, perejil y orégano.",
+        "imagen": "/static/c63c868c0bce08.webp",
+        "etiqueta": "Marinado campesino",
+        "categoriaVisual": "marinados",
+        "hechos": [
+          "Listo para cocinar: llévalo directamente a la parrilla, sartén, horno o air fryer y acompáñalo con ensalada, papa, arroz o vegetales.",
+          "Peso aprox.: 200–250 g.",
+          "Preparación: 20 min a 200 °C en Air Fryer."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 paquete",
+            "precio": 13000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "mar-churrasco",
+        "nombre": "Churrasco Campesino",
+        "emoji": "🔥",
+        "desc": "Sabor intenso, alma de parrilla.",
+        "detalle": "Marinado con sal marina, pimienta negra, ajo, azúcar morena, paprika ahumada, cebolla, pimentón rojo en escamas, semilla de mostaza, orégano, tomillo y romero.",
+        "imagen": "/static/37ddcab1800d6d.webp",
+        "etiqueta": "Marinado campesino",
+        "categoriaVisual": "marinados",
+        "hechos": [
+          "Listo para cocinar: llévalo directamente a la parrilla, sartén, horno o air fryer y acompáñalo con ensalada, papa, arroz o vegetales.",
+          "Peso aprox.: 250–300 g.",
+          "Preparación: 30 min a 200 °C en Air Fryer."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 paquete",
+            "precio": 13000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      },
+      {
+        "id": "mar-muslo",
+        "nombre": "Muslo Parrillero Rostizado",
+        "emoji": "🔥",
+        "desc": "Sabor rústico, jugosidad perfecta.",
+        "detalle": "Muslo marinado con sal marina, ajo, jengibre, paprika ahumada, pimienta negra, cúrcuma, cebolla, pimienta dulce, coriandro, perejil y orégano.",
+        "imagen": "/static/3453cf7e8737ac.webp",
+        "etiqueta": "Marinado campesino",
+        "categoriaVisual": "marinados",
+        "hechos": [
+          "Listo para cocinar: llévalo directamente a la parrilla, sartén, horno o air fryer y acompáñalo con ensalada, papa, arroz o vegetales.",
+          "Peso aprox.: 300–350 g.",
+          "Cantidad: 2 unidades.",
+          "Preparación: 30 min a 200 °C en Air Fryer."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 paquete",
+            "precio": 13000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "hamburguesas": {
+    "titulo": "Charcutería",
+    "emoji": "🍔",
+    "tag": "Elaborados en casa",
+    "desc": "Productos elaborados en nuestra finca con ingredientes 100% naturales de nuestra propia producción.",
+    "productos": [
+      {
+        "id": "hamburguesa",
+        "nombre": "Hamburguesa de pollo",
+        "emoji": "🍔",
+        "desc": "Paquete de cuatro hamburguesas de pollo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/a005a32bae8135d4.webp",
+        "etiqueta": "4 unidades",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "Paquete x4",
+            "precio": 20000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": false
+      }
+    ]
+  },
+  "huerta": {
+    "titulo": "De la huerta",
+    "emoji": "🥑",
+    "tag": "Fresco y natural",
+    "desc": "Frutas y verduras cultivadas sin químicos y cosechadas en su punto justo.",
+    "productos": [
+      {
+        "id": "aguacate",
+        "nombre": "Aguacate Hass",
+        "emoji": "🥑",
+        "desc": "Aguacate Hass vendido por kilo.",
+        "detalle": "Producto fresco y cremoso que aporta sabor, textura y grasas naturalmente presentes en el aguacate a comidas frías o calientes.",
+        "imagen": "/static/155068729ba3ac36.webp",
+        "etiqueta": "Verduras",
+        "categoriaVisual": "frescos",
+        "hechos": [
+          "Cómo usarlo: en ensaladas, tostadas, bowls, guacamole o como acompañamiento de pollo y sopas.",
+          "Consérvalo según su punto de maduración y consúmelo fresco."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 8000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
+        "id": "zucchini",
+        "nombre": "Zucchini",
+        "emoji": "🥑",
+        "desc": "Zucchini verde vendido por kilo.",
+        "detalle": "Vegetal fresco, ligero y versátil, fácil de incorporar a preparaciones rápidas o platos completos.",
+        "imagen": "/static/640c6a16981085bd.webp",
+        "etiqueta": "Verduras",
+        "categoriaVisual": "frescos",
+        "hechos": [
+          "Cómo usarlo: salteado, asado, en cremas, sopas, pastas vegetales, tortillas o como acompañamiento.",
+          "Su sabor suave combina con pollo, caldos, hierbas y otras verduras."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 3500,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      }
+    ]
+  }
+}

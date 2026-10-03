@@ -6,9 +6,10 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: waitress-serve --listen=0.0.0.0:$PORT --url-scheme=https --threads=4 --connection-limit=100 --max-request-body-size=16384 --max-request-header-size=8192 app:app
     healthCheckPath: /healthz
+    domains:
+      - campesinochiguanos.com
     envVars:
+      - key: CUSTOM_DOMAINS
+        value: campesinochiguanos.com,www.campesinochiguanos.com
       - key: TRUSTED_HOSTS
-        fromService:
-          type: web
-          name: campesinos-chiguanos
-          envVarKey: RENDER_EXTERNAL_HOSTNAME
+        value: campesinos-chiguanos.onrender.com,campesinochiguanos.com,www.campesinochiguanos.com

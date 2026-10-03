@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: waitress-serve --listen=0.0.0.0:$PORT --threads=4 --connection-limit=100 --max-request-body-size=16384 --max-request-header-size=8192 app:app
+    startCommand: waitress-serve --listen=0.0.0.0:$PORT --url-scheme=https --threads=4 --connection-limit=100 --max-request-body-size=16384 --max-request-header-size=8192 app:app
     healthCheckPath: /healthz
     envVars:
       - key: TRUSTED_HOSTS

@@ -12,7 +12,7 @@ function moveLiquidIndicator(container,target,animate=true){
  if(animate&&marker.dataset.target===targetKey&&marker.getAnimations().length)return;
  const end={left:target.offsetLeft,top:target.offsetTop,width:target.offsetWidth,height:target.offsetHeight};
  const positioned=marker.dataset.positioned==='true',markerRect=positioned?marker.getBoundingClientRect():null,containerRect=positioned?container.getBoundingClientRect():null;
- const start=markerRect?{left:markerRect.left-containerRect.left,top:markerRect.top-containerRect.top,width:markerRect.width,height:markerRect.height}:end;
+ const start=markerRect?{left:markerRect.left-containerRect.left+container.scrollLeft-container.clientLeft,top:markerRect.top-containerRect.top+container.scrollTop-container.clientTop,width:markerRect.width,height:markerRect.height}:end;
  marker.style.opacity='1';
  marker.getAnimations().forEach(animation=>animation.cancel());
  if(!animate||!marker.dataset.positioned||matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -21,7 +21,8 @@ function moveLiquidIndicator(container,target,animate=true){
  }
  const dx=end.left-start.left,dy=end.top-start.top,distance=Math.hypot(dx,dy);
  if(distance<2&&Math.abs(end.width-start.width)<2&&Math.abs(end.height-start.height)<2)return;
- const horizontal=Math.abs(dx)>=Math.abs(dy),stretch=Math.min(1.72,1.06+distance/360);
+ const mobileFilter=container.classList.contains('filter-row')&&container.scrollWidth>container.clientWidth;
+ const horizontal=Math.abs(dx)>=Math.abs(dy),stretch=mobileFilter?Math.min(1.15,1.02+distance/1200):Math.min(1.72,1.06+distance/360);
  const mid={left:start.left+dx*.45,top:start.top+dy*.45,width:start.width+(end.width-start.width)*.45,height:start.height+(end.height-start.height)*.45};
  const finish={left:end.left,top:end.top,width:end.width,height:end.height};
  Object.assign(marker.style,{left:`${end.left}px`,top:`${end.top}px`,width:`${end.width}px`,height:`${end.height}px`});
@@ -30,8 +31,14 @@ function moveLiquidIndicator(container,target,animate=true){
   {offset:.46,left:`${mid.left}px`,top:`${mid.top}px`,width:`${mid.width}px`,height:`${mid.height}px`,transform:horizontal?`scale(${stretch},.92)`:`scale(.92,${stretch})`,borderRadius:'46% 54% 48% 52%'},
   {offset:.78,left:`${finish.left}px`,top:`${finish.top}px`,width:`${finish.width}px`,height:`${finish.height}px`,transform:horizontal?'scale(.97,1.04)':'scale(1.04,.97)',borderRadius:'52% 48% 51% 49%'},
   {left:`${finish.left}px`,top:`${finish.top}px`,width:`${finish.width}px`,height:`${finish.height}px`,transform:'scale(1,1)',borderRadius:'999px'}
- ],{duration:Math.min(1450,820+distance*.55),easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'});
+ ],{duration:mobileFilter?320:Math.min(1450,820+distance*.55),easing:'cubic-bezier(.4,0,.2,1)',fill:'forwards'});
  animation.onfinish=()=>animation.cancel();marker.dataset.positioned='true';marker.dataset.target=targetKey;
+}
+function revealFilterChip(target){
+ const row=target?.closest('.filter-row');if(!row||row.scrollWidth<=row.clientWidth)return;
+ const left=target.offsetLeft,right=left+target.offsetWidth;
+ if(left>=row.scrollLeft&&right<=row.scrollLeft+row.clientWidth)return;
+ row.scrollTo({left:left-(row.clientWidth-target.offsetWidth)/2,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
 }
 function activateNavLink(link,animate=true){
  mainNav.querySelectorAll('a').forEach(item=>{const active=item===link;item.classList.toggle('is-nav-active',active);if(active)item.setAttribute('aria-current','location');else item.removeAttribute('aria-current');});
@@ -59,6 +66,17 @@ window.addEventListener('resize',()=>requestAnimationFrame(()=>{
  moveLiquidIndicator(mainNav,mainNav.querySelector('.is-nav-active')||mainNav.querySelector('a'),false);
  moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),false);
 }));
+if('ResizeObserver' in window){
+ let frame=0;
+ const layoutObserver=new ResizeObserver(()=>{
+  cancelAnimationFrame(frame);
+  frame=requestAnimationFrame(()=>{
+   moveLiquidIndicator(mainNav,mainNav.querySelector('.is-nav-active')||mainNav.querySelector('a'),false);
+   moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),false);
+  });
+ });
+ document.querySelectorAll('.nav a,.filter-chip').forEach(item=>layoutObserver.observe(item));
+}
 
 document.getElementById('year').textContent=new Date().getFullYear();
 
@@ -675,7 +693,9 @@ function setFilter(filter,scroll=true) {
   activeFilter=filter; activeSearch='';
   document.getElementById('productSearch').value='';
   document.querySelectorAll('[data-filter]').forEach(btn=>{btn.classList.toggle('is-active',btn.dataset.filter===filter);btn.setAttribute('aria-pressed',String(btn.dataset.filter===filter));});
-  moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),true);
+  const activeChip=document.querySelector('.filter-chip.is-active');
+  moveLiquidIndicator(document.querySelector('.filter-row'),activeChip,true);
+  revealFilterChip(activeChip);
   renderProducts();
   if(scroll) document.getElementById('tienda').scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -705,7 +725,7 @@ document.querySelectorAll('[data-filter]').forEach(btn=>btn.addEventListener('cl
 
 document.getElementById('productSearch').addEventListener('input',e=>{revealClicks=0;activeSearch=e.currentTarget.value.trim();renderProducts();});
 document.getElementById('productSort').addEventListener('change',e=>{revealClicks=0;activeSort=e.currentTarget.value;renderProducts();});
-document.getElementById('resetFilters').addEventListener('click',()=>{activeFilter='caldos';activeSearch='';activeSort='featured';document.getElementById('productSearch').value='';document.getElementById('productSort').value='featured';document.querySelectorAll('[data-filter]').forEach(btn=>{btn.classList.toggle('is-active',btn.dataset.filter==='caldos');btn.setAttribute('aria-pressed',String(btn.dataset.filter==='caldos'));});moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),true);renderProducts();});
+document.getElementById('resetFilters').addEventListener('click',()=>{activeFilter='caldos';activeSearch='';activeSort='featured';document.getElementById('productSearch').value='';document.getElementById('productSort').value='featured';document.querySelectorAll('[data-filter]').forEach(btn=>{btn.classList.toggle('is-active',btn.dataset.filter==='caldos');btn.setAttribute('aria-pressed',String(btn.dataset.filter==='caldos'));});const activeChip=document.querySelector('.filter-chip.is-active');moveLiquidIndicator(document.querySelector('.filter-row'),activeChip,true);revealFilterChip(activeChip);renderProducts();});
 
 document.getElementById('checkoutForm').addEventListener('submit',e=>{e.preventDefault();submitQuote(e.currentTarget);});
 document.getElementById('city').addEventListener('change',updateDelivery);
@@ -779,6 +799,10 @@ syncOverlay();
 document.querySelectorAll('[data-filter]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.filter===activeFilter)));
 activateNavLink(mainNav.querySelector('a[href="#tienda"]'),false);
 moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),false);
+document.fonts?.ready.then(()=>{
+ moveLiquidIndicator(mainNav,mainNav.querySelector('.is-nav-active')||mainNav.querySelector('a'),false);
+ moveLiquidIndicator(document.querySelector('.filter-row'),document.querySelector('.filter-chip.is-active'),false);
+});
 if(orderState?.orderStatus==='awaiting_confirmation' && cart.length) setTimeout(showSentConfirmation,0);
 
 })().catch(error=>{document.getElementById('productGrid').textContent='No pudimos cargar la tienda. Recarga la página para intentarlo de nuevo.';console.error(error);});

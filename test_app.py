@@ -95,7 +95,7 @@ class TiendaTests(unittest.TestCase):
         response=self.client.post('/api/cotizar',json=self.payload)
         self.assertEqual(response.status_code,200)
         self.assertEqual(response.json['total'],44000)
-        self.assertTrue(response.json['whatsapp'].startswith('https://wa.me/573132046536?text='))
+        self.assertTrue(response.json['whatsapp'].startswith('https://wa.me/573202969384?text='))
         self.assertEqual(response.headers['Cache-Control'],'no-store')
         self.assertNotIn('personalizar tu caldo de hueso gratis en bolsitas de 250 ml',response.json['detalle'])
 

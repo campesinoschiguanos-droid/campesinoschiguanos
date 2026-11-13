@@ -11,7 +11,7 @@ def configuration(overrides=None):
         'MAPS_EMBED_API_KEY': os.environ.get('GOOGLE_MAPS_EMBED_API_KEY', ''),
         'TRUSTED_HOSTS': os.environ.get('TRUSTED_HOSTS', '127.0.0.1,localhost').split(',')
                          + [domain for domain in os.environ.get('CUSTOM_DOMAINS', '').split(',') if domain.strip()],
-        'WHATSAPP_NUMBER': os.environ.get('WHATSAPP_NUMBER', '573132046536'),
+        'WHATSAPP_NUMBER': os.environ.get('WHATSAPP_NUMBER', '573202969384'),
         'DEBUG': False,
     }
     config.update(overrides or {})

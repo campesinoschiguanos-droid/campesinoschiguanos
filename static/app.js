@@ -144,7 +144,7 @@ let activeFilter = 'caldos';
 let activeSearch = '';
 let activeSort = 'featured';
 let revealClicks=0;
-const FEATURED_ORDER=['broth-pollo','broth-beef','broth-dual','broth-pollo-neutro','combo-sabores','sabor-green','sabor-turmeric','sabor-mexican','cuadro-chicken','cuadro-beef','cuadro-dual','cuadro-green','cuadro-turmeric','cuadro-mexican','cuadro-aloe','cp-pechuga','cp-pechugasp','cp-filete','cp-alaentera','cp-alasinpunta','cp-pierna','cp-pierna-sin-piel','cp-muslo','cp-muslo-sin-piel','cp-contramuslo','cp-contramuslo-sin-piel','cp-churrasco','cp-entero','corte-anillos','corte-cubos','corte-julianas','corte-molida','mar-alas','mar-filete','mar-churrasco','mar-muslo','hamburguesa','aguacate','zucchini'];
+const FEATURED_ORDER=['broth-pollo','broth-beef','broth-dual','broth-pollo-neutro','combo-sabores','sabor-green','sabor-turmeric','sabor-mexican','cuadro-chicken','cuadro-beef','cuadro-dual','cuadro-green','cuadro-turmeric','cuadro-mexican','cuadro-aloe','cp-pechuga','cp-pechugasp','cp-filete','cp-alaentera','cp-alasinpunta','cp-bombon-ala','cp-pierna','cp-pierna-sin-piel','cp-muslo','cp-muslo-sin-piel','cp-contramuslo','cp-contramuslo-sin-piel','cp-churrasco','cp-entero','corte-anillos','corte-cubos','corte-julianas','corte-molida','mar-alas','mar-filete','mar-churrasco','mar-muslo','hamburguesa','aguacate','zucchini'];
 const featuredRank=new Map(FEATURED_ORDER.map((id,position)=>[id,position]));
 
 const grid = document.getElementById('productGrid');

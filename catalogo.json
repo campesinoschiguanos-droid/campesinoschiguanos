@@ -760,6 +760,29 @@
         "pesoVariable": true
       },
       {
+        "id": "cp-bombon-ala",
+        "nombre": "Bombón de ala",
+        "emoji": "🐔",
+        "desc": "Bombón de ala de pollo, vendido por kilo.",
+        "detalle": "Una opción práctica y versátil para preparar comidas caseras con el sabor y la cocción que prefieras.",
+        "imagen": "/static/0f2c220ead2a09c2.png",
+        "etiqueta": "Corte de pollo",
+        "categoriaVisual": "pollo",
+        "hechos": [
+          "Cómo usarlo: ideal para sartén, horno, parrilla, air fryer, sopas o guisos, según el corte.",
+          "Combínalo con vegetales, ensaladas, arroz, papa o tu acompañamiento favorito."
+        ],
+        "opciones": [
+          {
+            "etiqueta": "1 kilo",
+            "precio": 23000,
+            "ml": 0,
+            "unidades": 0
+          }
+        ],
+        "pesoVariable": true
+      },
+      {
         "id": "cp-pierna",
         "nombre": "Pierna pernil",
         "emoji": "🐔",
@@ -937,7 +960,7 @@
         "opciones": [
           {
             "etiqueta": "1 pollo entero · Precio por kilo",
-            "precio": 17500,
+            "precio": 18000,
             "ml": 0,
             "unidades": 0
           }

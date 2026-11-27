@@ -43,7 +43,7 @@ Referencias: [despliegue Flask en Render](https://render.com/docs/deploy-flask) 
 
 ## Catálogo y pedidos
 
-Hay 39 productos. `catalogo.json` es la fuente de precios, presentaciones, volumen y unidades. Las fotos y los precios se actualizan al recargar la página: el servidor detecta los cambios, valida el archivo y publica una versión completa. Los identificadores internos de la primera entrega se conservaron para productos equivalentes; se agregó el combo de cinco sabores.
+Hay 40 productos. `catalogo.json` es la fuente de precios, presentaciones, volumen y unidades. Las fotos y los precios se actualizan al recargar la página: el servidor detecta los cambios, valida el archivo y publica una versión completa. Los identificadores internos de la primera entrega se conservaron para productos equivalentes; se agregó el combo de cinco sabores.
 
 Se conservaron los precios de la segunda página. El pollo entero muestra su tarifa por kilo, pero la cantidad seleccionada corresponde a pollos completos: 1 equivale a un pollo, 2 a dos pollos. La ficha, el carrito y la presentación incluida en la cotización explican esta diferencia; el valor final depende del peso real y se confirma por WhatsApp. Los productos por kilo se identifican como de precio sujeto al peso final.
 
@@ -112,7 +112,7 @@ node test_frontend.cjs
 
 Se mantiene la validación del servidor, precios enteros, límite de 50 unidades por presentación y 100 líneas, máximo de cuerpo JSON de 16 KiB, cabeceras CSP y `nosniff`, bloqueo de frames y cotizaciones sin caché. El catálogo público se valida y serializa al arrancar y después de cada cambio del archivo; usa ETag para revalidarse. Las solicitudes sin cambios reutilizan la versión en memoria y pueden responder sin reenviar el contenido. La CSP no permite CSS ni JavaScript inline. También se rechazan solicitudes con origen externo y caracteres de control o de reordenación bidireccional en los datos ingresados.
 
-La API es una operación de cálculo sin autenticación ni escritura de pedidos. El catálogo se valida al iniciar y la aplicación acepta por defecto solo `127.0.0.1` y `localhost`; `TRUSTED_HOSTS` permite configurar los dominios de producción. No tiene un limitador distribuido de tráfico. Al publicar, usar HTTPS y los límites del alojamiento. `WHATSAPP_NUMBER` configura el número comercial (por defecto 573132046536). Revisar también el texto visible del número si se cambia esta variable.
+La API es una operación de cálculo sin autenticación ni escritura de pedidos. El catálogo se valida al iniciar y la aplicación acepta por defecto solo `127.0.0.1` y `localhost`; `TRUSTED_HOSTS` permite configurar los dominios de producción. No tiene un limitador distribuido de tráfico. Al publicar, usar HTTPS y los límites del alojamiento. `WHATSAPP_NUMBER` configura el número comercial (por defecto 573202969384). Revisar también el texto visible del número si se cambia esta variable.
 
 Una futura función de pedidos persistentes, administración o cobro requiere autenticación, autorización y protección adicional acorde con sus operaciones. Esta revisión no certifica ausencia de vulnerabilidades ni sustituye una auditoría del alojamiento.
 

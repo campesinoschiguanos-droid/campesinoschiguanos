@@ -258,7 +258,7 @@ class IntegracionTests(unittest.TestCase):
             indexar_catalogo(catalogo)
 
     def test_catalogo_completo(self):
-        self.assertEqual(len(PRODUCTOS),39)
+        self.assertEqual(len(PRODUCTOS),40)
         for p in PRODUCTOS.values():
             for o in p['opciones']:
                 self.assertIs(type(o['precio']),int)
